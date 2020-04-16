@@ -1,21 +1,39 @@
 var indexPage = {
     data: {
-        // 首页轮播图
-        indexBanners: [
+        // 快速导航
+        quickMenus: [
             {
-                imgUrl: '../images/index_img_1.jpg'
-            },
-            {
-                imgUrl: '../images/index_img_1.jpg'
-            },
-            {
-                imgUrl: '../images/index_img_1.jpg'
-            },
-            {
-                imgUrl: '../images/index_img_1.jpg'
-            },
-            {
-                imgUrl: '../images/index_img_1.jpg'
+                title: '警综平台',
+                icon: '../images/quick_img_1.png',
+                path: 'http://tymh.gaj.nkg.js/loginOperate/toUserLogin'
+            },{
+                title: '行政平台',
+                icon: '../images/quick_img_2.png',
+                path: 'http://xzgl.gaj.nkg.js/njga_oa/platform/MainPage/login-for-usb.html'
+            },{
+                title: '情报平台',
+                icon: '../images/quick_img_3.png',
+                path: 'http://10.33.70.181/'
+            },{
+                title: '智慧搜',
+                icon: '../images/quick_img_4.png',
+                path: 'http://10.32.223.77/gwdp2.1/'
+            },{
+                title: '在逃人员',
+                icon: '../images/quick_img_5.png',
+                path: 'http://ztry-zyk.zx.ga/zhyy_zt//pages/xzztry/login.jsp?error=1'
+            },{
+                title: '法律法规',
+                icon: '../images/quick_img_6.png',
+                path: 'http://flfgcx.gat.js/law/home/begin1.cbs'
+            },{
+                title: '省厅联络',
+                icon: '../images/quick_img_7.png',
+                path: 'https://txll.js/app/;x-session-usap=6788B9CCE388295CBBC7B3268084C101?0'
+            },{
+                title: '网上考试',
+                icon: '../images/quick_img_8.png',
+                path: 'http://10.33.1.9/exam/'
             }
         ]
     },
@@ -108,27 +126,29 @@ var indexPage = {
      */
     netGetQuickList: function () {
         var _this = this;
-        getQuickList({
-            data: {
-                Status: 2 // 状态 1：未上架，2：已上架
-            },
-            success: function(res) {
-                if(res.state === 'success') {
-                    var html = '<h4>快速导航</h4>'+
+        // getQuickList({
+        //     data: {
+        //         Status: 2 // 状态 1：未上架，2：已上架
+        //     },
+        //     success: function(res) {
+        //         if(res.state === 'success') {
+                    var html = '<h4><img src="../images/quick_bg.png" /><span>快速导航</span></h4>'+
                                 '<ul>';
                     
-                    for(var i = 0; i < res.data.length; i++) {
-                        var item = res.data[i];
+                    for(var i = 0; i < this.data.quickMenus.length; i++) {
+                        var item = this.data.quickMenus[i];
                         html += '<li>'+
-                                    '<a target="_blank" href="' + item.Address + '">' + item.Name + '</a>'+
+                                    '<a target="_blank" href="' + item.path + '">'+
+                                        '<img src="'+ item.icon +'" />'
+                                    '</a>'+
                                 '</li>';
                     }
                     html += '</ul>';
 
                     $("#quickNav").html(html);
-                }
-            }
-        });
+                // }
+            // }
+        // });
     },
 
     /**

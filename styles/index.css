@@ -311,26 +311,57 @@ a {
 }
 
 .quick_nav_box h4 {
+    position: relative;
     background-color: #184183;
     color: #ffffff;
-    width: 150px;
-    line-height: 56px;
-    text-align: center;
+    width: 200px;
+    height: 67px;
     float: left;
+    z-index: 1;
+}
+
+.quick_nav_box h4 span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    line-height: 67px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 24px;
+}
+
+.quick_nav_box h4 img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 200px;
+    height: 67px;
 }
 
 .quick_nav_box ul {
     overflow: hidden;
+    padding: 0 20px
 }
 
 .quick_nav_box li {
-    line-height: 56px;
     padding: 0 20px;
     float: left;
 }
 
 .quick_nav_box ul li a {
     color: #333333;
+    display: block;
+}
+
+.quick_nav_box ul li img {
+    border: none;
+    height: 67px;
+    display: block;
 }
 
 
