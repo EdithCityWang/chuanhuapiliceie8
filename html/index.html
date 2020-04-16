@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淳化派出所</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../libs/swiper2/css/idangerous.swiper.css">
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+
+<body>
+    <div class="layout_header">
+        <div class="layout_header_tip">常用网站：
+            <a target="_blank" href="http://10.33.199.12/">江宁公安分局</a>&nbsp;&nbsp;
+            <a target="_blank" href="http://50.35.1.189:8080/">江宁公安政工网</a>
+            <span id="nowTime" class="now_time"></span>
+        </div>
+        <!-- 轮播图 beginning -->
+        <div id="layoutSwiper" class="layout-swiper swiper-container"></div>
+        <!-- 轮播图 ending -->
+        <!-- menu beginning -->
+        <div id="layoutMenu" class="layout_menu layout_header_menu"></div>
+        <!-- menu ending -->
+    </div>
+    <div class="layout_container">
+        <div class="layout_row layout_row_gutter">
+            <div class="layout_col layout_col_3">
+                <!-- 轮播图 beginning -->
+                <div id="indexSwiper" class="index-swiper swiper-container"></div>
+                <!-- 轮播图 ending -->
+            </div>
+            <div class="layout_col layout_col_3">
+                <!-- 综合要闻 -->
+                <div id="card_article_2" class="card card_primary"></div>
+            </div>
+            <div class="layout_col layout_col_2">
+                <!-- 公告栏 -->
+                <div id="card_article_3" class="card card_primary"></div>
+            </div>
+        </div>
+        <!-- 快速导航 -->
+        <div class="layout_row quick_nav_box" id="quickNav"></div>
+        <div class="layout_row layout_row_gutter">
+            <div class="layout_col layout_col_2">
+                <!-- 通知通报 -->
+                <div id="card_article_4" class="card card_primary"></div>
+            </div>
+            <div class="layout_col layout_col_2">
+                <!-- 执法通报 -->
+                <div id="card_article_5" class="card card_primary"></div>
+            </div>
+            <div class="layout_col layout_col_2">
+                <!-- 绩效考核 -->
+                <div id="card_article_6" class="card card_primary"></div>
+            </div>
+            <div class="layout_col layout_col_2">
+                <!-- 值班通勤 本所通讯 -->
+                <div id="dutyBox" class="card duty_box">
+                    <div class="card_header">
+                        <div class="card_header_title layout_menu">
+                            <a class="active" href="javascript:;">值班通勤</a>
+                            <!-- <a data-type="addressBook" href="javascript:;">本所通讯</a> -->
+                        </div>
+                        <a class="card_header_extra" href="../html/addressBookList.html">本所通讯</a>
+                    </div>
+                    <div class="card_container"></div>
+                </div>
+            </div>
+        </div>
+        <div class="layout_row title_img_box">
+            <img src="../images/banner_img_1.gif" />
+        </div>
+        <div class="layout_row layout_row_gutter">
+            <div class="layout_col layout_col_2">
+                <!-- 基础工作 -->
+                <div id="card_article_7" class="card card_primary"></div>
+            </div>
+            <div class="layout_col layout_col_2">
+                <!-- 治安管控 -->
+                <div id="card_article_8" class="card card_primary"></div>
+            </div>
+            <div class="layout_col layout_col_2">
+                <!-- 刑侦动态 -->
+                <div id="card_article_9" class="card card_primary"></div>
+            </div>
+            <div class="layout_col layout_col_2">
+                <!-- 警营之星 -->
+                <div class="card card_primary">
+                    <div class="card_header">
+                        <div class="card_header_title">警营之星</div>
+                        <a class="card_header_extra" href="../html/starsList.html">更多</a>
+                    </div>
+                    <div class="card_container">
+                        <!-- 轮播图 beginning -->
+                        <div id="starSwiper" class="star-swiper swiper-container"></div>
+                        <!-- 轮播图 ending -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout_row photogram_box">
+            <div class="photogram_title_box">
+                <h4>一线剪影</h4>
+                <a href="../html/cucolorisList.html">更多</a>
+            </div>
+            <!-- 轮播图 beginning -->
+            <div id="photogramSwiper" class="photogram-swiper swiper-container"></div>
+            <!-- 轮播图 ending -->
+        </div>
+        <div class="layout_row layout_row_gutter">
+            <div class="layout_col layout_col_2">
+                <!-- 民意诉求 -->
+                <div id="card_article_10" class="card card_primary"></div>
+            </div>
+            <div class="layout_col layout_col_2">
+                <!-- 法规速递 -->
+                <div id="card_article_11" class="card card_primary"></div>
+            </div>
+            <div class="layout_col layout_col_2">
+                <!-- 媒体聚焦 -->
+                <div id="card_article_12" class="card card_primary"></div>
+            </div>
+            <div class="layout_col layout_col_2">
+                <!-- 上级录用 -->
+                <div id="card_article_13" class="card card_primary"></div>
+            </div>
+        </div>
+        <div class="layout_row title_img_box">
+            <img src="../images/banner_img_2.jpg" />
+        </div>
+        <div class="layout_row layout_row_gutter">
+            <div class="layout_col layout_col_2">
+                <!-- 队伍建设 -->
+                <div id="card_article_14" class="card card_error"></div>
+            </div>
+            <div class="layout_col layout_col_2">
+                <!-- 学习园地 -->
+                <div id="card_article_15" class="card card_error"></div>
+            </div>
+            <div class="layout_col layout_col_2">
+                <!-- 警营文苑 -->
+                <div id="card_article_16" class="card card_error"></div>
+            </div>
+            <div class="layout_col layout_col_2">
+                <!-- 党风廉政 -->
+                <div id="card_article_17" class="card card_error"></div>
+            </div>
+        </div>
+        <div class="layout_row friend_links">
+            <div class="firend_links_header">
+                <h4>友情链接</h4>
+                <div id="firendLinkTypes" class="layout_menu"></div>
+            </div>
+            <ul id="friendLinksContent" class="friend_links_content"></ul>
+        </div>
+    </div>
+    <div class="layout_footer"> 主办单位：淳化派出所 </div>
+</body>
+<script src="../libs/jquery/jquery-1.9.1.min.js"></script>
+<script src="../libs/swiper2/js/idangerous.swiper.min.js"></script>
+<script src="../libs/moment/moment.min.js"></script>
+<script src="../libs/moment/moment-with-locales.min.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/index.js"></script>
+
+</html>
